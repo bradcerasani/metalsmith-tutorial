@@ -16,6 +16,11 @@ Metalsmith(__dirname)
   .use(collections({
     pages: {
       pattern: 'content/pages/*.markdown'
+    },
+    posts: {
+      pattern: 'content/posts/*.markdown',
+      sortBy: 'date',
+      reverse: true
     }
   }))
   .use(markdown())
